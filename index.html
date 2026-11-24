@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>陀螺對戰基地</title>
+<meta name="description" content="給小朋友的戰鬥陀螺介紹：零件、類型、比賽規則、發射練習和對戰小遊戲。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%80%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css?v=2">
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="#home"><span class="logo-spin">🌀</span>陀螺對戰基地</a>
+  <nav class="tabs" aria-label="選單">
+    <a class="tab" data-go="home" href="#home"><b>🏠</b>首頁</a>
+    <a class="tab" data-go="parts" href="#parts"><b>🔧</b>零件</a>
+    <a class="tab" data-go="types" href="#types"><b>🎯</b>類型</a>
+    <a class="tab" data-go="rules" href="#rules"><b>📏</b>規則</a>
+    <a class="tab" data-go="launch" href="#launch"><b>🚀</b>發射</a>
+    <a class="tab" data-go="battle" href="#battle"><b>⚔️</b>對戰</a>
+    <a class="tab" data-go="parents" href="#parents"><b>👨‍👩‍👦</b>家長</a>
+  </nav>
+</header>
+
+<main>
+<!-- 首頁 -->
+<section class="page" id="home">
+  <h1>戰鬥陀螺是什麼？</h1>
+  <div class="card hero">
+    <div class="hero-bey"><div class="bowl"></div><div class="spin" id="heroBey"></div></div>
+    <div>
+      <div class="bubble">戰鬥陀螺是會「打架」的陀螺！</div>
+      <div class="bubble">兩個人一起把陀螺發射到盤子裡。<small>陀螺會撞來撞去，碰！碰！碰！</small></div>
+      <div class="bubble">最後還在轉、沒被撞出去的就贏了！🏆</div>
+    </div>
+  </div>
+
+  <h1>來探險吧！</h1>
+  <div class="go-grid">
+    <a class="go-card" href="#parts"><span class="big">🔧</span><b>三個零件</b><span>拆開來、換一換</span></a>
+    <a class="go-card" href="#types"><span class="big">🎯</span><b>四種類型</b><span>誰會贏誰？</span></a>
+    <a class="go-card" href="#rules"><span class="big">📏</span><b>比賽規則</b><span>怎麼拿分數</span></a>
+    <a class="go-card" href="#launch"><span class="big">🚀</span><b>發射練習</b><span>怎樣轉最久</span></a>
+    <a class="go-card" href="#battle"><span class="big">⚔️</span><b>對戰遊戲</b><span>跟電腦比一比</span></a>
+    <a class="go-card" href="#parts"><span class="big">🧪</span><b>組裝實驗室</b><span>做出最強陀螺</span></a>
+  </div>
+
+  <div class="card" style="margin-top:22px">
+    <h2>你知道嗎？</h2>
+    <div class="facts">
+      <div class="fact"><b>💨</b>陀螺轉得超快，一秒鐘可以轉好幾十圈！</div>
+      <div class="fact"><b>🇯🇵</b>戰鬥陀螺是日本發明的玩具。</div>
+      <div class="fact"><b>🔩</b>現在最新的是「X 世代」，頂端是金屬做的。</div>
+    </div>
+  </div>
+</section>
+
+<!-- 零件 -->
+<section class="page" id="parts" hidden>
+  <h1>陀螺的三個零件</h1>
+  <p class="lead">一顆陀螺可以拆成三個零件。點點看每個零件！</p>
+  <div class="card">
+    <div class="explode">
+      <svg id="explodeSvg" viewBox="0 0 470 290" role="img" aria-label="陀螺拆開的樣子">
+        <line class="p-guide" x1="170" y1="86" x2="170" y2="190" stroke="#9aa3c7" stroke-width="3" stroke-dasharray="6 6"/>
+        <g id="pBit" class="part" data-part="bit">
+          <rect x="135" y="188" width="70" height="26" rx="6" fill="#ffd23f" stroke="#7a5b00" stroke-width="4"/>
+          <path d="M138 214 L202 214 L180 262 L160 262 Z" fill="#ffd23f" stroke="#7a5b00" stroke-width="4" stroke-linejoin="round"/>
+          <circle cx="170" cy="265" r="6" fill="#fff" stroke="#7a5b00" stroke-width="3"/>
+        </g>
+        <g id="pRatchet" class="part" data-part="ratchet">
+          <rect x="112" y="112" width="12" height="12" fill="#6b7280"/><rect x="136" y="112" width="12" height="12" fill="#6b7280"/>
+          <rect x="160" y="112" width="12" height="12" fill="#6b7280"/><rect x="184" y="112" width="12" height="12" fill="#6b7280"/>
+          <rect x="208" y="112" width="12" height="12" fill="#6b7280"/>
+          <rect x="102" y="120" width="130" height="34" rx="8" fill="#9ca3af" stroke="#374151" stroke-width="4"/>
+          <text x="167" y="144" text-anchor="middle" font-size="18" font-weight="900" fill="#1f2937">3-60</text>
+        </g>
+        <g id="pBlade" class="part" data-part="blade">
+          <path d="M30 68 L8 56 L50 50 Z M310 68 L332 56 L290 50 Z" fill="#ffd23f" stroke="#7a1b0c" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M28 70 L60 34 L110 24 L230 24 L280 34 L312 70 L280 86 L60 86 Z" fill="#ff5a36" stroke="#7a1b0c" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M110 24 L170 8 L230 24 Z" fill="#ffd23f" stroke="#7a1b0c" stroke-width="4" stroke-linejoin="round"/>
+          <rect x="118" y="46" width="104" height="20" rx="10" fill="#ffd23f"/>
+        </g>
+        <g class="p-label" fill="#fff">
+          <line x1="336" y1="56" x2="356" y2="56" stroke="#9aa3c7" stroke-width="3"/>
+          <text x="362" y="64" fill="#ff5a36">① 鋒刃</text>
+          <line x1="236" y1="137" x2="356" y2="137" stroke="#9aa3c7" stroke-width="3"/>
+          <text x="362" y="145" fill="#4b5563">② 固鎖</text>
+          <line x1="208" y1="225" x2="356" y2="225" stroke="#9aa3c7" stroke-width="3"/>
+          <text x="362" y="233" fill="#b38600">③ 軸心</text>
+        </g>
+      </svg>
+      <div>
+        <div class="part-info" id="partInfo">
+          <h3>👆 點一下零件</h3>
+          <p>看看每個零件是做什麼的。</p>
+        </div>
+        <div class="chip-row">
+          <button class="chip" data-part="blade">① 鋒刃</button>
+          <button class="chip" data-part="ratchet">② 固鎖</button>
+          <button class="chip" data-part="bit">③ 軸心</button>
+        </div>
+        <p style="margin-top:14px"><button class="btn blue" id="assembleBtn">🔩 組合起來！</button></p>
+      </div>
+    </div>
+  </div>
+
+  <h1>🧪 組裝實驗室</h1>
+  <p class="lead">零件可以互相交換！選一選，做出你自己的陀螺。</p>
+  <div class="card lab">
+    <div>
+      <div class="pick-group"><h3>① 選鋒刃</h3><div class="picks" id="pickBlade"></div></div>
+      <div class="pick-group"><h3>② 選固鎖</h3><div class="picks" id="pickRatchet"></div></div>
+      <div class="pick-group"><h3>③ 選軸心</h3><div class="picks" id="pickBit"></div></div>
+      <button class="btn ghost" id="randomBtn">🎲 隨便組一個</button>
+    </div>
+    <div class="lab-out">
+      <div class="spin" id="labBey"></div>
+      <div class="bey-name" id="labName"></div>
+      <div><span class="type-badge" id="labType"></span></div>
+      <div class="bars" id="labBars"></div>
+      <div class="lab-say" id="labSay"></div>
+      <p style="margin:14px 0 0"><a class="btn" href="#battle" style="text-decoration:none;display:inline-block">⚔️ 用它去對戰</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- 類型 -->
+<section class="page" id="types" hidden>
+  <h1>四種陀螺類型</h1>
+  <p class="lead">每種陀螺都有自己的厲害絕招。</p>
+  <div class="type-grid">
+    <div class="type-card" style="background:#ef4444"><span class="big">💥</span><b>攻擊型</b><p>跑得快、很會撞。<br>想把對手撞飛！</p></div>
+    <div class="type-card" style="background:#3b82f6"><span class="big">🛡️</span><b>防禦型</b><p>又重又穩。<br>怎麼撞都不怕！</p></div>
+    <div class="type-card" style="background:#14b8a6"><span class="big">⏳</span><b>持久型</b><p>轉得超級久。<br>撐到最後就贏！</p></div>
+    <div class="type-card" style="background:#8b5cf6"><span class="big">⚖️</span><b>平衡型</b><p>什麼都會一點。<br>攻守都可以！</p></div>
+  </div>
+
+  <div class="card rps" style="margin-top:22px">
+    <svg viewBox="0 0 380 320" role="img" aria-label="攻擊贏持久，持久贏防禦，防禦贏攻擊">
+      <defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#1b1f3b"/></marker></defs>
+      <path d="M222 82 L300 214" stroke="#1b1f3b" stroke-width="5" marker-end="url(#arr)" fill="none"/>
+      <path d="M272 266 L110 266" stroke="#1b1f3b" stroke-width="5" marker-end="url(#arr)" fill="none"/>
+      <path d="M80 214 L158 82" stroke="#1b1f3b" stroke-width="5" marker-end="url(#arr)" fill="none"/>
+      <text x="282" y="142" font-size="20" font-weight="900" fill="#1b1f3b">贏</text>
+      <text x="180" y="296" font-size="20" font-weight="900" fill="#1b1f3b">贏</text>
+      <text x="80" y="142" font-size="20" font-weight="900" fill="#1b1f3b">贏</text>
+      <circle cx="190" cy="52" r="44" fill="#ef4444"/><text x="190" y="48" text-anchor="middle" font-size="30">💥</text><text x="190" y="80" text-anchor="middle" font-size="18" font-weight="900" fill="#fff">攻擊</text>
+      <circle cx="320" cy="258" r="44" fill="#14b8a6"/><text x="320" y="254" text-anchor="middle" font-size="30">⏳</text><text x="320" y="286" text-anchor="middle" font-size="18" font-weight="900" fill="#fff">持久</text>
+      <circle cx="60" cy="258" r="44" fill="#3b82f6"/><text x="60" y="254" text-anchor="middle" font-size="30">🛡️</text><text x="60" y="286" text-anchor="middle" font-size="18" font-weight="900" fill="#fff">防禦</text>
+      <circle cx="190" cy="186" r="38" fill="#8b5cf6"/><text x="190" y="184" text-anchor="middle" font-size="26">⚖️</text><text x="190" y="210" text-anchor="middle" font-size="16" font-weight="900" fill="#fff">平衡</text>
+    </svg>
+    <div>
+      <h2>像剪刀石頭布！</h2>
+      <p>💥 <b>攻擊型</b>會把只會轉的<b>持久型</b>撞飛。</p>
+      <p>⏳ <b>持久型</b>可以比<b>防禦型</b>轉得更久。</p>
+      <p>🛡️ <b>防禦型</b>很重，<b>攻擊型</b>撞上去反而自己彈開。</p>
+      <p>⚖️ <b>平衡型</b>在中間，跟誰比都有機會。</p>
+      <p style="color:var(--soft)">所以沒有「永遠最強」的陀螺喔！</p>
+    </div>
+  </div>
+</section>
+
+<!-- 規則 -->
+<section class="page" id="rules" hidden>
+  <h1>比賽規則</h1>
+  <div class="card">
+    <h2>怎麼比賽？</h2>
+    <ol class="steps">
+      <li><div>兩個人站在對戰盤兩邊，把陀螺裝在發射器上。</div></li>
+      <li><div>一起喊：<span class="shout">3、2、1，Go Shoot！</span></div></li>
+      <li><div>喊到「Shoot」的時候，<b>一起</b>把陀螺發射進盤子。</div></li>
+      <li><div>發射以後<b>不可以用手碰</b>陀螺和盤子，只能加油！</div></li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>怎麼拿分數？</h2>
+    <div class="score-grid">
+      <div class="score"><span class="big">😵</span><b>持久勝</b>對手先停下來<br><span class="pts">1 分</span></div>
+      <div class="score"><span class="big">🚀</span><b>擊飛勝</b>把對手撞出盤外<br><span class="pts">2 分</span></div>
+      <div class="score"><span class="big">💥</span><b>爆裂勝</b>把對手撞到散開<br><span class="pts">2 分</span></div>
+      <div class="score x3"><span class="big">⚡</span><b>極限勝</b>把對手撞進極限區<br><span class="pts">3 分</span></div>
+      <div class="score"><span class="big">🤝</span><b>平手</b>兩顆一起停<br><span class="pts">重來</span></div>
+    </div>
+    <div class="win-line">🏆 先拿到 4 分的人贏！</div>
+  </div>
+
+  <div class="card">
+    <h2>🙅 這樣是犯規</h2>
+    <div class="foul">
+      <div><b>⏰</b>沒有跟口令一起發射</div>
+      <div><b>🎯</b>陀螺沒有進到盤子裡</div>
+      <div><b>✋</b>比賽中用手碰陀螺</div>
+    </div>
+    <p style="margin-top:12px">犯規就要重新發射。</p>
+  </div>
+
+  <div class="card">
+    <h2>🧑‍⚖️ 你來當裁判！</h2>
+    <p>發生這件事，可以拿幾分？</p>
+    <div class="quiz-q" id="quizQ"></div>
+    <div class="quiz-a" id="quizA"></div>
+    <div class="quiz-msg" id="quizMsg"></div>
+    <p class="best" id="quizScore"></p>
+  </div>
+</section>
+
+<!-- 發射 -->
+<section class="page" id="launch" hidden>
+  <h1>怎麼發射轉最久？</h1>
+  <div class="tips">
+    <div class="tip"><span class="big">⚡</span><b>拉得快、拉到底</b><p>一口氣用力拉，<br>中間不要停！</p></div>
+    <div class="tip"><span class="big">📏</span><b>發射器要放平</b><p>歪歪的話，<br>陀螺會搖來搖去。</p></div>
+    <div class="tip"><span class="big">👇</span><b>靠近盤子</b><p>不要舉太高，<br>陀螺才不會彈跳。</p></div>
+  </div>
+
+  <div class="card" style="margin-top:22px">
+    <h2>🎮 拉繩練習</h2>
+    <p>按住紅色的「拉」，<b>快快地、直直地</b>拉到 🏁！</p>
+    <div class="practice">
+      <div class="mini-bowl"><div class="spin" id="practiceBey"></div><div class="mini-count" id="practiceCount"></div></div>
+      <div>
+        <div class="pull-track" id="pullTrack"><span class="pull-end">🏁</span><div class="pull-handle" id="pullHandle">拉 ➜</div></div>
+        <div class="pull-msg" id="pullMsg">準備好了嗎？</div>
+        <div class="stars" id="pullStars"></div>
+        <div class="best" id="pullBest"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>想轉久？還是想撞人？</h2>
+    <table class="simple">
+      <tr><th>我想要…</th><th>這樣發射</th></tr>
+      <tr><td>⏳ 轉很久</td><td>發射器放平，對準盤子中間，穩穩放下去。</td></tr>
+      <tr><td>💥 撞對手</td><td>發射器斜一點點，讓陀螺衝到邊邊的齒軌加速。</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- 對戰 -->
+<section class="page" id="battle" hidden>
+  <h1>⚔️ 對戰遊戲</h1>
+  <p class="lead">跟電腦比賽，先拿 4 分就贏！</p>
+  <div class="card arena">
+    <div class="canvas-wrap">
+      <canvas id="stadium" width="400" height="400" aria-label="對戰盤"></canvas>
+      <div class="call" id="call"></div>
+      <p class="tap-hint">👆 也可以直接點盤子發射！</p>
+      <div class="legend">
+        <span style="--c:#ff5a36">極限區 3 分</span>
+        <span style="--c:#1b1f3b">擊飛口 2 分</span>
+      </div>
+    </div>
+    <div>
+      <div class="vs">
+        <div class="who"><div class="spin slow" id="meBey"></div><b>你</b><b id="meName"></b><div class="dots" id="meDots"></div></div>
+        <div class="vs-mid">VS</div>
+        <div class="who"><div class="spin slow" id="cpuBey"></div><b>電腦</b><b id="cpuName"></b><div class="dots" id="cpuDots"></div></div>
+      </div>
+      <div class="style-row">
+        <button class="chip on" data-style="steady">⏳ 放平發射</button>
+        <button class="chip" data-style="tilt">💥 斜斜發射</button>
+      </div>
+      <div class="battle-msg" id="battleMsg">按「準備」，聽口令，喊到 Go Shoot! 的時候按「發射」！</div>
+      <button class="btn shoot-btn" id="shootBtn">準備！</button>
+      <p class="style-row">
+        <a class="btn ghost" href="#parts" style="text-decoration:none">🧪 換零件</a>
+        <button class="btn ghost" id="newCpuBtn">🔄 換對手</button>
+        <button class="btn ghost" id="resetBtn">↩️ 重新比賽</button>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- 家長 -->
+<section class="page" id="parents" hidden>
+  <h1>給爸爸媽媽看</h1>
+  <p class="lead">不用全都懂，讓孩子當老師教你，他們會很開心。</p>
+
+  <details class="parents" open>
+    <summary>💬 和孩子聊天的話題</summary>
+    <div class="body">
+      <div class="talk">
+        <div><b>問他的陀螺</b>「你最喜歡哪一顆？叫什麼名字？是攻擊型還是持久型？」</div>
+        <div><b>聽他講卡通</b>「主角是誰？最近演到哪裡？」不用自己先懂劇情。</div>
+        <div><b>陪他對戰</b>讓他教你怎麼發射。輸給他也沒關係，他會很有成就感。</div>
+        <div><b>問學校的事</b>「班上誰的陀螺最強？下課會比嗎？」這常是他交朋友的話題。</div>
+      </div>
+      <h3 style="margin-top:16px">記住這幾個詞就夠用</h3>
+      <div class="words">
+        <div><b>Go Shoot！</b>發射口令：「3、2、1，Go Shoot！」</div>
+        <div><b>極限勝</b>撞進盤邊的極限區，3 分，最帥的贏法。</div>
+        <div><b>爆裂</b>陀螺被撞到零件散開。</div>
+        <div><b>鋒刃／固鎖／軸心</b>X 世代陀螺的上、中、下三個零件。</div>
+        <div><b>換零件</b>三個零件可以拆開互換，組出自己的組合。</div>
+        <div><b>攻擊／防禦／持久／平衡</b>四種類型，互相剋制。</div>
+      </div>
+    </div>
+  </details>
+
+  <details class="parents">
+    <summary>📚 戰鬥陀螺的世代</summary>
+    <div class="body">
+      <p>戰鬥陀螺（Beyblade）由日本 TAKARA TOMY 推出，有搭配的卡通。已經出過好幾代，不同世代的零件大多不能混用：</p>
+      <table class="simple">
+        <tr><th>世代</th><th>年代</th><th>特色</th></tr>
+        <tr><td>初代（爆轉陀螺）</td><td>1999 年起</td><td>家長小時候可能玩過</td></tr>
+        <tr><td>鋼鐵戰魂（Metal Fight）</td><td>2008 年起</td><td>金屬輪盤</td></tr>
+        <tr><td>爆裂世代（Burst）</td><td>2015 年起</td><td>被撞到會爆開散掉</td></tr>
+        <tr><td><b>X 世代（Beyblade X）</b></td><td>2023 年起</td><td>目前最新；盤邊有齒軌可以加速</td></tr>
+      </table>
+      <p style="margin-top:10px">本站的零件名稱（龍牙刃、鐵盾刃⋯⋯）和數值都是為了遊戲自己編的，不是真的商品。</p>
+    </div>
+  </details>
+
+  <details class="parents">
+    <summary>🛒 購買小提醒</summary>
+    <div class="body">
+      <ul>
+        <li><b>入門組（Starter）</b>：一顆陀螺加一支發射器，第一個買這個。</li>
+        <li><b>對戰盤（Stadium）</b>：一定要有，在地板上轉很快就停，也不好玩。</li>
+        <li><b>第二顆陀螺</b>：想對戰才需要，家長可以拿一顆陪孩子玩。</li>
+        <li>認明 <b>TAKARA TOMY</b> 正版。仿冒品很多，品質差也容易壞。</li>
+        <li>美國孩之寶（Hasbro）版本設計不同，最好不要混著買。</li>
+        <li>玩家常提到的熱門款有 Dran Sword、Phoenix Wing、Wizard Rod、Cobalt Dragoon 等，但新款推出得很快，最準的是問孩子同學在玩哪一顆。</li>
+        <li>可以和孩子約好「表現好或特別節日才買新的」。</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="parents">
+    <summary>⚠️ 安全注意</summary>
+    <div class="body">
+      <ul>
+        <li>X 世代轉速很快，頂端又是金屬，<b>臉不要靠近對戰盤</b>。</li>
+        <li>發射前看看周圍有沒有人，不要對著人發射。</li>
+        <li>零件很小，家裡有更小的弟弟妹妹要收好，避免誤吞。</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="parents">
+    <summary>📏 正式比賽的補充</summary>
+    <div class="body">
+      <ul>
+        <li>正式比賽常用 <b>3 對 3</b>：每人準備 3 顆陀螺，先排好出場順序，輪流比。</li>
+        <li>犯規通常重新發射；同一人連續犯規，可能算對手得 1 分。各比賽的細節不同，參加前先問主辦單位。</li>
+        <li>在家玩可以把勝利分數改成 3 分或 5 分。</li>
+      </ul>
+    </div>
+  </details>
+</section>
+</main>
+
+<footer>家長自製的介紹網站，和戰鬥陀螺官方沒有關係。網站裡的圖都是自己畫的示意圖。</footer>
+
+<script src="assets/sim.js?v=1"></script>
+<script src="assets/app.js?v=2"></script>
+</body>
+</html>
